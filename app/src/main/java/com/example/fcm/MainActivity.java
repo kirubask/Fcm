@@ -44,6 +44,9 @@ public class MainActivity extends AppCompatActivity {
                     messagee.setText("");
                     Toast.makeText(MainActivity.this, "MESSAGE SENT", Toast.LENGTH_SHORT).show();
                 }
+                if (title.equals("") && message.equals("")){
+                    Toast.makeText(MainActivity.this, "please enter the value", Toast.LENGTH_SHORT).show();
+                }
             }
         });
 

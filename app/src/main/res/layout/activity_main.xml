@@ -1,47 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@color/back">
 
-   <EditText
-       android:layout_width="match_parent"
-       android:layout_height="wrap_content"
-       android:id="@+id/titleEditTxt"
-       android:textSize="19sp"
-       android:textColor="@color/black"
-       android:textStyle="bold"
-       android:inputType="text"
-       android:layout_marginTop="250dp"
-       android:layout_marginLeft="10dp"
-       android:layout_marginRight="10dp"
-       android:padding="15dp">
-   </EditText>
-    <EditText
-       android:layout_width="match_parent"
-       android:layout_height="wrap_content"
-       android:id="@+id/messageEditTxt"
-       android:textSize="19sp"
-       android:textColor="@color/black"
-       android:textStyle="bold"
-       android:inputType="text"
-       android:layout_marginTop="50dp"
-       android:layout_marginLeft="10dp"
-       android:layout_marginRight="10dp"
-        android:padding="15dp">
-   </EditText>
-    <Button
+    <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/sendBtn"
-        android:layout_marginTop="50dp"
-        android:layout_marginLeft="150dp"
+        android:id="@+id/icon"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/titleEditTxt">
+    </ImageView>
+
+    <EditText
+        android:id="@+id/titleEditTxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="TITLE"
+        android:inputType="text"
+        android:background="@drawable/btn_radius"
+        android:padding="15dp"
+        android:textColor="@color/black"
+        android:textSize="22sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.343">
+
+    </EditText>
+
+    <EditText
+        android:id="@+id/messageEditTxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_radius"
+        android:hint="MESSAGE"
+        android:inputType="text"
+        android:padding="15dp"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleEditTxt"
+        app:layout_constraintVertical_bias="0.258">
+
+    </EditText>
+
+    <Button
+        android:id="@+id/sendBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="150dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/btn_radius"
+        android:padding="10dp"
         android:text="send"
         android:textSize="16sp"
-        android:padding="10dp"/>
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/messageEditTxt"
+        app:layout_constraintVertical_bias="0.083" />
 
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

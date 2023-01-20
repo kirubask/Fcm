@@ -22,8 +22,10 @@ public class FcmSend {
     private static String Server_key = "key=AAAAboAhGYI:APA91bHY08Ko8-iD_qSQYa7-YFHpnFGrTJi2bTpTW8Laxr_9I8x4D_vAbB7JXWEWjQi7FpvK8cvOsroKmBT9AaRR_nG2dKuR5dxC1Y0DXSC_OYBAurrq1Z5ooAyJT2JmJ3zA-H9XO3vI";
 
     public static void pushNotification(Context context,String token,String title,String message){
+
         StrictMode.ThreadPolicy threadPolicy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
         StrictMode.setThreadPolicy(threadPolicy);
+
         RequestQueue queue  = Volley.newRequestQueue(context);
         try {
             JSONObject jsonObject = new JSONObject();
